@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Emoji Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen">
+  <h1 class="text-2xl font-bold mb-6">Random Emoji Generator</h1>
+
+  <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-40 h-40 flex items-center justify-center text-6xl mb-6" id="emojiBox">
+    😄
+  </div>
+
+  <button onclick="generateEmoji()" class="bg-purple-500 px-6 py-2 rounded hover:bg-purple-700 transition">Generate Emoji</button>
+
+  <script>
+    const emojis = ['😀', '🎉', '🚀', '🌈', '🐶', '😎', '🍕', '🌍', '📚', '💡', '🧠', '🔥', '🎮', '🎧'];
+    function generateEmoji() {
+      const randomIndex = Math.floor(Math.random() * emojis.length);
+      document.getElementById('emojiBox').innerText = emojis[randomIndex];
+    }
+  </script>
+</body>
+</html>
